@@ -1,13 +1,13 @@
 from datetime import datetime
-from sqlalchemy import String, Integer, Text, ForeignKey, Table, Boolean, DateTime, func
+from sqlalchemy import String, Integer, Text, ForeignKey, Table, Boolean, DateTime, func, Column
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db import Base
 
 note_tags = Table(
     "note_tags",
     Base.metadata,
-    mapped_column("note_id", ForeignKey("notes.id", ondelete="CASCADE"), primary_key=True),
-    mapped_column("tag_id", ForeignKey("tags.id", ondelete="CASCADE"), primary_key=True),
+    Column("note_id", ForeignKey("notes.id", ondelete="CASCADE"), primary_key=True),
+    Column("tag_id", ForeignKey("tags.id", ondelete="CASCADE"), primary_key=True),
 )
 
 class User(Base):
