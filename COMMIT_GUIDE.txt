@@ -1,0 +1,11 @@
+Suggested commit messages (human, concise):
+
+feat(auth): add JWT signup/login with hashed passwords
+feat(notes): ownership, tags, search, pagination, archive
+chore(config): env-based settings + CORS support
+test: add end-to-end flow for auth + notes
+docs: rewrite README (quickstart, deploy, curl examples)
+chore(ci): add GitHub Actions workflow for pytest
+chore(docker): add Dockerfile and docker-compose for Postgres
+chore(deploy): add render.yaml and railway.json
+style: run black/ruff

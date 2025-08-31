@@ -1,0 +1,9 @@
+Suggested commit history (example):
+
+- chore(init): initial FastAPI project with CRUD notes
+- feat(auth): add user signup/login with JWT
+- feat(notes): support tags, search, archive, pagination
+- test: cover auth + notes flow with pytest
+- chore(ci): add GitHub Actions workflow
+- docs: update README with quickstart and deploy steps
+- chore: add pre-commit config (black + ruff)
