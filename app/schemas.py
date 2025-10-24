@@ -1,6 +1,8 @@
 from datetime import datetime
 from pydantic import BaseModel, EmailStr, Field
 from typing import List, Optional
+from pydantic import BaseModel, Field
+
 
 class TagBase(BaseModel):
     name: str = Field(..., max_length=50)
@@ -49,3 +51,7 @@ class UserOut(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
+
+class NoteCreate(BaseModel):
+    title: str = Field(min_length=1, max_length=120)
+    content: str = Field(min_length=1, max_length=5000)
